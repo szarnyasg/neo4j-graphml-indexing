@@ -81,7 +81,7 @@ public class Neo4jLoader {
 
 		GlobalGraphOperations graphOperations = GlobalGraphOperations
 				.at(graphDb);
-		//updateAutoIndex(graphDb, graphDb.index().getNodeAutoIndexer(), graphOperations.getAllNodes());
+		updateAutoIndex(graphDb, graphDb.index().getNodeAutoIndexer(), graphOperations.getAllNodes());
 
 		getGodsByIndex(graphDb);
 
