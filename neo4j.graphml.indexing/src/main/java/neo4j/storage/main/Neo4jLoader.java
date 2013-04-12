@@ -81,13 +81,14 @@ public class Neo4jLoader {
 
 		GlobalGraphOperations graphOperations = GlobalGraphOperations
 				.at(graphDb);
-		updateAutoIndex(graphDb, graphDb.index().getNodeAutoIndexer(), graphOperations.getAllNodes());
+		updateAutoIndex(graphDb, graphDb.index().getNodeAutoIndexer(),
+				graphOperations.getAllNodes());
 
 		getGodsByIndex(graphDb);
 
 		graphDb.shutdown();
 	}
-	
+
 	// source: https://github.com/neo4j/neo4j/issues/173
 	private static <T extends PropertyContainer> void updateAutoIndex(
 			GraphDatabaseService db, AutoIndexer<T> autoIndexer,
